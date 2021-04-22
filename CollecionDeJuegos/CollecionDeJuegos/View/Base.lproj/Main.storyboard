@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Rrj-To-OkY">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="CollecionDeJuegos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pbX-hC-X0w">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pbX-hC-X0w" secondAttribute="trailing" id="0vu-z8-QSk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pbX-hC-X0w" secondAttribute="bottom" id="3be-ig-sjP"/>
+                            <constraint firstItem="pbX-hC-X0w" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6cf-Hw-QBf"/>
+                            <constraint firstItem="pbX-hC-X0w" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="lRF-8t-gU5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="GfR-Cv-eoh">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Gl9-nK-QVf">
+                            <connections>
+                                <segue destination="mWn-GZ-imt" kind="show" identifier="juegoSegue" id="Fvd-je-xZM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="pbX-hC-X0w" id="r9U-Ub-3Wu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="947.82608695652186" y="45.535714285714285"/>
+        </scene>
+        <!--Create Or Update Game View Controller-->
+        <scene sceneID="2G5-S3-DgG">
+            <objects>
+                <viewController id="mWn-GZ-imt" customClass="CreateOrUpdateGameViewController" customModule="CollecionDeJuegos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SfI-cu-nzl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ani-NU-KDE">
+                                <rect key="frame" x="67" y="108" width="280" height="350"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="SDq-0d-Kwb"/>
+                                    <constraint firstAttribute="width" constant="280" id="m81-BJ-6qi"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5NY-G0-iiG">
+                                <rect key="frame" x="50" y="528" width="314" height="42"/>
+                                <color key="backgroundColor" red="1" green="0.3209656496983061" blue="0.41916676562557942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Agregar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="agregarTapped:" destination="mWn-GZ-imt" eventType="touchUpInside" id="BqB-gZ-bjW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YMV-1s-cjb">
+                                <rect key="frame" x="50" y="589" width="314" height="42"/>
+                                <color key="backgroundColor" red="1" green="0.32096564970000002" blue="0.41916676559999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Eliminar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Titulo" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dbb-P9-ASu">
+                                <rect key="frame" x="50" y="476" width="314" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ng4-V3-VYD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YMV-1s-cjb" firstAttribute="centerX" secondItem="SfI-cu-nzl" secondAttribute="centerX" id="031-w0-r6x"/>
+                            <constraint firstItem="ani-NU-KDE" firstAttribute="top" secondItem="ng4-V3-VYD" secondAttribute="top" constant="20" id="0xx-9H-raJ"/>
+                            <constraint firstItem="5NY-G0-iiG" firstAttribute="leading" secondItem="ng4-V3-VYD" secondAttribute="leading" constant="50" id="9P6-bh-aUe"/>
+                            <constraint firstItem="YMV-1s-cjb" firstAttribute="top" secondItem="5NY-G0-iiG" secondAttribute="bottom" constant="19" id="FZ2-jQ-3P9"/>
+                            <constraint firstItem="dbb-P9-ASu" firstAttribute="leading" secondItem="ng4-V3-VYD" secondAttribute="leading" constant="50" id="Ipz-QK-2Qu"/>
+                            <constraint firstItem="ani-NU-KDE" firstAttribute="centerX" secondItem="SfI-cu-nzl" secondAttribute="centerX" id="Ixu-uS-SGj"/>
+                            <constraint firstItem="dbb-P9-ASu" firstAttribute="top" secondItem="ani-NU-KDE" secondAttribute="bottom" constant="18" id="J3e-c1-3PY"/>
+                            <constraint firstItem="5NY-G0-iiG" firstAttribute="top" secondItem="ani-NU-KDE" secondAttribute="bottom" constant="70" id="SRU-gh-p5E"/>
+                            <constraint firstItem="YMV-1s-cjb" firstAttribute="leading" secondItem="ng4-V3-VYD" secondAttribute="leading" constant="50" id="Z0n-EC-gya"/>
+                            <constraint firstItem="ng4-V3-VYD" firstAttribute="trailing" secondItem="5NY-G0-iiG" secondAttribute="trailing" constant="50" id="jsO-zN-8cd"/>
+                            <constraint firstItem="dbb-P9-ASu" firstAttribute="centerX" secondItem="SfI-cu-nzl" secondAttribute="centerX" id="mdx-e8-jra"/>
+                            <constraint firstItem="ng4-V3-VYD" firstAttribute="trailing" secondItem="YMV-1s-cjb" secondAttribute="trailing" constant="50" id="rZJ-6m-AXp"/>
+                            <constraint firstItem="ng4-V3-VYD" firstAttribute="trailing" secondItem="dbb-P9-ASu" secondAttribute="trailing" constant="50" id="sSw-xX-sIs"/>
+                            <constraint firstItem="5NY-G0-iiG" firstAttribute="centerX" secondItem="SfI-cu-nzl" secondAttribute="centerX" id="sUX-CQ-zwV"/>
+                            <constraint firstItem="5NY-G0-iiG" firstAttribute="top" secondItem="dbb-P9-ASu" secondAttribute="bottom" constant="18" id="sWR-P6-Vuw"/>
+                            <constraint firstItem="ani-NU-KDE" firstAttribute="centerX" secondItem="SfI-cu-nzl" secondAttribute="centerX" id="vcv-XY-fga"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="tPf-0Q-MAf">
+                        <barButtonItem key="rightBarButtonItem" image="camara" id="BIq-Fs-L8Q">
+                            <connections>
+                                <action selector="onClckAlertCameraOrGalery:" destination="mWn-GZ-imt" id="Bbp-Sl-eVA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="btnAddOrUpdate" destination="5NY-G0-iiG" id="syq-kK-lvg"/>
+                        <outlet property="btnCameraOrGalery" destination="BIq-Fs-L8Q" id="jgJ-68-gc7"/>
+                        <outlet property="btnDelete" destination="YMV-1s-cjb" id="0lI-yK-wYH"/>
+                        <outlet property="imageView" destination="ani-NU-KDE" id="unX-Vj-nHd"/>
+                        <outlet property="txtTitulo" destination="dbb-P9-ASu" id="WR9-sW-Zbb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h8q-Gf-Bew" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1739" y="46"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oXN-5H-atB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Rrj-To-OkY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FmP-IZ-NmP">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Cgz-L4-rW5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uc6-Qa-8Nc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="37.681159420289859" y="45.535714285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camara" width="64" height="64"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
