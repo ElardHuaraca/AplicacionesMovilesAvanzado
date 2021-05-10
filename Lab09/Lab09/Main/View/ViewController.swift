@@ -12,9 +12,10 @@ class ViewController: UIViewController{
     
     @IBOutlet weak var pokeTextField: UITextField!
     @IBOutlet weak var pokeListPicker: UIPickerView!
+    @IBOutlet weak var pokeImage: UIImageView!
     
     var viewPokemodel = ViewModelPokemon()
-    var viewPockemon = ViewModelPokemonForm()
+    var viewPokemoDetail = ViewModelpokemonImages()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,14 +60,30 @@ extension ViewController:  UIPickerViewDelegate, UIPickerViewDataSource, UITextF
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         pokeTextField.text = viewPokemodel.dataArrayPockemonList[row].name
+        viewPokemoDetail.getListPockemon(name: viewPokemodel.dataArrayPockemonList [row].name)
+        setImage()
+        
         pokeListPicker.isHidden = true
-        let spliteado = viewPokemodel.dataArrayPockemonList[row].url.split(separator: "/")
-        viewPockemon.getListPockemon(id: "\(spliteado[spliteado.count-1])")
     }
+    
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         pokeListPicker.isHidden = false
         return false
+    }
+    
+    func getDataFromImage(url: String) -> Data {
+        let url = URL(string: viewPokemoDetail.ListDetails!.front_default)
+        let data = try? Data(contentsOf: url!)
+        return data!
+    }
+    
+    func setImage() {
+        viewPokemoDetail.refreshData = {
+            DispatchQueue.main.async { [self] in
+                self.pokeImage.image = UIImage(data: getDataFromImage(url:  self.viewPokemoDetail.ListDetails!.front_default))
+            }
+        }
     }
 }
 

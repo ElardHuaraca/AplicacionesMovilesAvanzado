@@ -22,29 +22,44 @@
                             </textField>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kca-2t-r2G">
                                 <rect key="frame" x="0.0" y="646" width="414" height="216"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </pickerView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fis-Bk-nPR">
+                                <rect key="frame" x="82" y="223" width="250" height="339"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.30463576158940397" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="buH-cY-Is0"/>
+                                    <constraint firstAttribute="height" constant="339" id="r8M-kV-Auk"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.96464646460000003" green="0.62664290440000003" blue="0.1500217878" alpha="0.85740894040000004" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="fis-Bk-nPR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="82" id="3hf-tc-xJn"/>
                             <constraint firstItem="0zI-zU-mYY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="7dQ-8V-rgs"/>
+                            <constraint firstItem="Kca-2t-r2G" firstAttribute="top" secondItem="fis-Bk-nPR" secondAttribute="bottom" constant="84" id="8YR-rL-7lQ"/>
                             <constraint firstItem="0zI-zU-mYY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="9VT-ak-gyo"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0zI-zU-mYY" secondAttribute="trailing" constant="20" id="DPp-kb-k2z"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Kca-2t-r2G" secondAttribute="trailing" id="GfV-Y0-OyI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Kca-2t-r2G" secondAttribute="bottom" id="Gtj-60-mRi"/>
+                            <constraint firstItem="fis-Bk-nPR" firstAttribute="top" secondItem="0zI-zU-mYY" secondAttribute="bottom" constant="125" id="HTf-7i-O4M"/>
                             <constraint firstItem="Kca-2t-r2G" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="J87-kL-iDY"/>
                             <constraint firstItem="0zI-zU-mYY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NKm-Mk-2jN"/>
                             <constraint firstItem="Kca-2t-r2G" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SMx-og-j6P"/>
+                            <constraint firstItem="fis-Bk-nPR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WCe-kl-ory"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fis-Bk-nPR" secondAttribute="trailing" constant="82" id="opi-0K-eCd"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="pokeImage" destination="fis-Bk-nPR" id="NRC-9b-RJO"/>
                         <outlet property="pokeListPicker" destination="Kca-2t-r2G" id="jt8-Q3-3wN"/>
                         <outlet property="pokeTextField" destination="0zI-zU-mYY" id="gjl-oq-BRf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="54"/>
+            <point key="canvasLocation" x="131.8840579710145" y="53.571428571428569"/>
         </scene>
     </scenes>
 </document>
