@@ -24,9 +24,11 @@ class ContacsViewController: UIViewController {
             (snapchot) in
             let user = Contact()
             let value = snapchot.value as? NSDictionary
+            print(snapchot.value)
             user.username = value!["username"] as! String
             user.url_image = value!["url_photo"] as! String
             self.contacts.append(user)
+            print("\(self.contacts.count)")
             self.contacTableView.reloadData()
         })
     }

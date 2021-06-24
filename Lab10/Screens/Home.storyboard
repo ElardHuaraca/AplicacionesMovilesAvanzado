@@ -16,11 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Xaj-Qj-ABv">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hrn-VS-ng3">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EZ9-5E-IMh">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
@@ -28,14 +24,10 @@
                         <viewLayoutGuide key="safeArea" id="FQA-gq-sWJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="hrn-VS-ng3" secondAttribute="bottom" id="0hI-l2-i1p"/>
-                            <constraint firstItem="hrn-VS-ng3" firstAttribute="top" secondItem="FQA-gq-sWJ" secondAttribute="top" id="2hw-qS-5as"/>
-                            <constraint firstItem="FQA-gq-sWJ" firstAttribute="trailing" secondItem="Xaj-Qj-ABv" secondAttribute="trailing" id="9O5-fm-1gj"/>
-                            <constraint firstItem="hrn-VS-ng3" firstAttribute="leading" secondItem="FQA-gq-sWJ" secondAttribute="leading" id="BX0-be-oqb"/>
-                            <constraint firstItem="FQA-gq-sWJ" firstAttribute="bottom" secondItem="Xaj-Qj-ABv" secondAttribute="bottom" id="H8U-Eg-tKD"/>
-                            <constraint firstItem="hrn-VS-ng3" firstAttribute="trailing" secondItem="FQA-gq-sWJ" secondAttribute="trailing" id="QPm-iB-DHe"/>
-                            <constraint firstItem="Xaj-Qj-ABv" firstAttribute="top" secondItem="FQA-gq-sWJ" secondAttribute="top" id="sRB-WJ-W15"/>
-                            <constraint firstItem="Xaj-Qj-ABv" firstAttribute="leading" secondItem="FQA-gq-sWJ" secondAttribute="leading" id="uxA-hR-cAd"/>
+                            <constraint firstItem="FQA-gq-sWJ" firstAttribute="bottom" secondItem="EZ9-5E-IMh" secondAttribute="bottom" id="IKH-dr-5W2"/>
+                            <constraint firstItem="FQA-gq-sWJ" firstAttribute="trailing" secondItem="EZ9-5E-IMh" secondAttribute="trailing" id="aci-lS-Yrs"/>
+                            <constraint firstItem="EZ9-5E-IMh" firstAttribute="top" secondItem="FQA-gq-sWJ" secondAttribute="top" id="s2g-ny-oSl"/>
+                            <constraint firstItem="EZ9-5E-IMh" firstAttribute="leading" secondItem="FQA-gq-sWJ" secondAttribute="leading" id="z3a-do-fVF"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Contactos" image="directorio-telefonico" selectedImage="directorio-telefonico" id="Fqo-t0-Wel">
@@ -44,7 +36,7 @@
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="10"/>
                     </tabBarItem>
                     <connections>
-                        <outlet property="contacTableView" destination="Xaj-Qj-ABv" id="pny-C0-KOb"/>
+                        <outlet property="contacTableView" destination="EZ9-5E-IMh" id="jL4-WF-iBk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EMK-yk-I5Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

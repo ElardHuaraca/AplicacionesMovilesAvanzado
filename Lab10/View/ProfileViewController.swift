@@ -16,6 +16,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
     @IBOutlet weak var txtEmailUser: UITextField!
     var imagePicker = UIImagePickerController()
     var credentetial: AuthCredential?
+    var imageChange: Bool?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +26,12 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
         imageProfileUser.addGestureRecognizer(tapGetstureRecognizer)
         
         imageStyle()
-        LoadData()
         imagePicker.delegate = self
+        
+        imageProfileUser.observe(\.image, options: [.new], changeHandler: {
+            [weak self](object, change) in
+            self!.imageChange = true
+        })
     }
     
     @IBAction func btnUpdateProfile(_ sender: Any) {
@@ -40,8 +45,9 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
                         alert.addAction(alertaction)
                         self.present(alert, animated: true, completion: nil)
                     }
-                })
+            })
         }
+        print("\(imageChange)")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -53,8 +59,8 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
         Database.database().reference().child("usuarios/\(user.id)").getData(completion: {
             (error,snapchot) in
             let value = snapchot.value as? NSDictionary
-            user.url = (value?["url_photo"] as! String)
             user.username = (value?["username"] as! String)
+            user.url = (value?["url_photo"] as! String)
             DispatchQueue.main.async {
                 self.txtEmailUser.text = user.email
                 self.txtNombreUser.text = user.username
