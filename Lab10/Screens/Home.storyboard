@@ -139,6 +139,23 @@
                                     <action selector="btnUpdateProfile:" destination="iUh-IC-dS1" eventType="touchUpInside" id="W95-TK-n7a"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CYv-xL-DZ6">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="E5e-xr-uGW">
+                                        <rect key="frame" x="157" y="312.5" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="L7e-qh-c5M"/>
+                                            <constraint firstAttribute="width" constant="100" id="ZTX-m0-dSi"/>
+                                        </constraints>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.35699259836384883" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="E5e-xr-uGW" firstAttribute="centerX" secondItem="CYv-xL-DZ6" secondAttribute="centerX" id="V3n-Az-R89"/>
+                                    <constraint firstItem="E5e-xr-uGW" firstAttribute="centerY" secondItem="CYv-xL-DZ6" secondAttribute="centerY" id="zH8-fN-xgO"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="F1f-DK-lgZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -149,13 +166,17 @@
                             <constraint firstItem="0qr-t7-tld" firstAttribute="leading" secondItem="F1f-DK-lgZ" secondAttribute="leading" constant="100" id="9cM-62-FtN"/>
                             <constraint firstAttribute="bottom" secondItem="g2d-HJ-XyE" secondAttribute="bottom" constant="-20" id="Is8-dj-S6n"/>
                             <constraint firstItem="d6i-Cg-TWh" firstAttribute="leading" secondItem="JWk-8L-GlB" secondAttribute="trailing" constant="10" id="JLf-k0-mBp"/>
+                            <constraint firstItem="CYv-xL-DZ6" firstAttribute="leading" secondItem="F1f-DK-lgZ" secondAttribute="leading" id="KJ1-dL-LLT"/>
+                            <constraint firstItem="CYv-xL-DZ6" firstAttribute="bottom" secondItem="F1f-DK-lgZ" secondAttribute="bottom" id="MSG-Ej-Skw"/>
                             <constraint firstItem="g2d-HJ-XyE" firstAttribute="top" secondItem="F1f-DK-lgZ" secondAttribute="top" constant="180" id="RGh-jf-z7H"/>
                             <constraint firstItem="JWk-8L-GlB" firstAttribute="top" secondItem="L05-No-8GC" secondAttribute="bottom" constant="45" id="Vzj-Mv-K9o"/>
                             <constraint firstItem="JWk-8L-GlB" firstAttribute="leading" secondItem="F1f-DK-lgZ" secondAttribute="leading" constant="20" id="ZIY-9n-oOd"/>
                             <constraint firstItem="F1f-DK-lgZ" firstAttribute="trailing" secondItem="0qr-t7-tld" secondAttribute="trailing" constant="100" id="bRn-o7-RLn"/>
+                            <constraint firstItem="CYv-xL-DZ6" firstAttribute="top" secondItem="F1f-DK-lgZ" secondAttribute="top" id="cKA-6t-DMW"/>
                             <constraint firstItem="d6i-Cg-TWh" firstAttribute="top" secondItem="L05-No-8GC" secondAttribute="bottom" constant="40" id="jem-Ro-tmD"/>
                             <constraint firstItem="9aX-O1-WFC" firstAttribute="leading" secondItem="eIK-xv-RKp" secondAttribute="trailing" constant="10" id="m5e-g8-yg9"/>
                             <constraint firstItem="F1f-DK-lgZ" firstAttribute="trailing" secondItem="g2d-HJ-XyE" secondAttribute="trailing" id="ptP-WJ-oOu"/>
+                            <constraint firstItem="F1f-DK-lgZ" firstAttribute="trailing" secondItem="CYv-xL-DZ6" secondAttribute="trailing" id="scp-qw-0pq"/>
                             <constraint firstItem="9aX-O1-WFC" firstAttribute="top" secondItem="d6i-Cg-TWh" secondAttribute="bottom" constant="40" id="tKu-zZ-Naa"/>
                             <constraint firstItem="F1f-DK-lgZ" firstAttribute="trailing" secondItem="d6i-Cg-TWh" secondAttribute="trailing" constant="20" id="tlh-NP-kLE"/>
                             <constraint firstItem="L05-No-8GC" firstAttribute="centerX" secondItem="Jw3-v3-VWb" secondAttribute="centerX" id="uZi-Qn-vZj"/>
@@ -171,7 +192,9 @@
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="10"/>
                     </tabBarItem>
                     <connections>
+                        <outlet property="giftIndicator" destination="E5e-xr-uGW" id="fmy-tE-AoH"/>
                         <outlet property="imageProfileUser" destination="L05-No-8GC" id="DSG-l8-fg5"/>
+                        <outlet property="tabIndicadot" destination="CYv-xL-DZ6" id="HQs-ss-PyB"/>
                         <outlet property="txtEmailUser" destination="9aX-O1-WFC" id="jxU-AS-nP8"/>
                         <outlet property="txtNombreUser" destination="d6i-Cg-TWh" id="Q9A-Gw-ZzC"/>
                     </connections>

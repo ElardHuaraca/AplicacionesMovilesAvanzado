@@ -24,11 +24,9 @@ class ContacsViewController: UIViewController {
             (snapchot) in
             let user = Contact()
             let value = snapchot.value as? NSDictionary
-            print(snapchot.value)
             user.username = value!["username"] as! String
             user.url_image = value!["url_photo"] as! String
             self.contacts.append(user)
-            print("\(self.contacts.count)")
             self.contacTableView.reloadData()
         })
     }
@@ -44,9 +42,16 @@ extension ContacsViewController: UITableViewDataSource, UITableViewDelegate{
         let cel = UITableViewCell()
         let contact = contacts[indexPath.row]
         cel.textLabel?.text = contact.username
-        let url = URL(string: contact.url_image)
-        let data = try? Data(contentsOf: url!)
-        cel.imageView?.image = UIImage(data: data!)
+        if(contact.url_image != ""){
+            let url = URL(string: contact.url_image)
+            let data = try? Data(contentsOf: url!)
+            cel.imageView?.image = UIImage(data: data!)
+            cel.imageView?.layer.cornerRadius = (cel.imageView?.frame.size.width)! / 2
+            cel.imageView?.clipsToBounds = true
+            cel.layoutIfNeeded()
+        }else{
+            cel.imageView?.image = UIImage(named: "user")
+        }
         return cel
     }
 }
