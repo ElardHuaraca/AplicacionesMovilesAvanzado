@@ -11,7 +11,7 @@ import FirebaseDatabase
 class ContacsViewController: UIViewController {
 
     @IBOutlet weak var contacTableView: UITableView!
-    var contacts: [User] = []
+    var contacts: [Contact] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,10 +22,10 @@ class ContacsViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         Database.database().reference().child("usuarios").observe(.childAdded, with: {
             (snapchot) in
-            let user = User(email: "", id: "", username: "", url: "")
+            let user = Contact()
             let value = snapchot.value as? NSDictionary
             user.username = value!["username"] as! String
-            user.url = value!["url_photo"] as! String
+            user.url_image = value!["url_photo"] as! String
             self.contacts.append(user)
             self.contacTableView.reloadData()
         })
@@ -42,7 +42,7 @@ extension ContacsViewController: UITableViewDataSource, UITableViewDelegate{
         let cel = UITableViewCell()
         let contact = contacts[indexPath.row]
         cel.textLabel?.text = contact.username
-        let url = URL(string: contact.url)
+        let url = URL(string: contact.url_image)
         let data = try? Data(contentsOf: url!)
         cel.imageView?.image = UIImage(data: data!)
         return cel

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2768BCB46FD6B1F6991D8211 /* Pods_Lab10.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6B1E24984E18AC549033EF /* Pods_Lab10.framework */; };
+		CF3752E92684E77700642E2E /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3752E82684E77700642E2E /* Contact.swift */; };
 		CF7AC80B266496BE00439A76 /* HomeBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7AC80A266496BE00439A76 /* HomeBarViewController.swift */; };
 		CF84BA5626727F3C00CDBE33 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF84BA5526727F3C00CDBE33 /* NewsViewController.swift */; };
 		CF84BA592672808700CDBE33 /* AuthContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF84BA582672808700CDBE33 /* AuthContext.swift */; };
@@ -30,6 +31,7 @@
 		103589819D5FAD84276558D1 /* Pods-Lab10.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lab10.release.xcconfig"; path = "Target Support Files/Pods-Lab10/Pods-Lab10.release.xcconfig"; sourceTree = "<group>"; };
 		3C6B1E24984E18AC549033EF /* Pods_Lab10.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lab10.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43EE4E139022922785A8F292 /* Pods-Lab10.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lab10.debug.xcconfig"; path = "Target Support Files/Pods-Lab10/Pods-Lab10.debug.xcconfig"; sourceTree = "<group>"; };
+		CF3752E82684E77700642E2E /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		CF7AC80A266496BE00439A76 /* HomeBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBarViewController.swift; sourceTree = "<group>"; };
 		CF84BA5526727F3C00CDBE33 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		CF84BA582672808700CDBE33 /* AuthContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthContext.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				CF84BA5C26728ACE00CDBE33 /* User.swift */,
+				CF3752E82684E77700642E2E /* Contact.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF3752E92684E77700642E2E /* Contact.swift in Sources */,
 				CFE2FFA9265ABFA300DF4A45 /* LoginViewController.swift in Sources */,
 				CFCD38002669B715005A78FA /* RegisterViewController.swift in Sources */,
 				CFBBDA2426754E2B0078CB0C /* ProfileViewController.swift in Sources */,
