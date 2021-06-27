@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="semana12Maps" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="uD1-GO-ta6">
+                                <rect key="frame" x="0.0" y="44" width="414" height="718"/>
+                            </mapView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="wSc-vB-20c">
+                                <rect key="frame" x="59.5" y="793" width="295" height="32"/>
+                                <segments>
+                                    <segment title="Standar"/>
+                                    <segment title="Satelite"/>
+                                    <segment title="Hibrido"/>
+                                    <segment title="4 to Map"/>
+                                </segments>
+                                <connections>
+                                    <action selector="actionSegmentControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="1lO-YA-nnN"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wSc-vB-20c" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8ZY-Yv-7cL"/>
+                            <constraint firstItem="uD1-GO-ta6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Kiu-2W-IrY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uD1-GO-ta6" secondAttribute="trailing" id="OxB-Sf-E8J"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uD1-GO-ta6" secondAttribute="bottom" constant="100" id="Vfd-hA-GPl"/>
+                            <constraint firstItem="uD1-GO-ta6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Zp3-U9-qs2"/>
+                            <constraint firstItem="wSc-vB-20c" firstAttribute="top" secondItem="uD1-GO-ta6" secondAttribute="bottom" constant="32" id="hQm-7Z-U5L"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="uD1-GO-ta6" id="H2W-V7-dHg"/>
+                        <outlet property="segmentControl" destination="wSc-vB-20c" id="bRr-sf-Ywx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="76"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
